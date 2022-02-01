@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  background-color: #ddd;
+}
+.todo-app {
+  width: 700px;
+  margin: auto;
+}
+.todo-app p {
+  text-align: center;
+  font-size: 28px;
+  color: #fff;
+  background-color: #330735;
+  padding: 30px 0;
+  text-transform: uppercase;
+  margin: 0 auto;
+  border-bottom: 1px solid #ddd;
+}
+.mini-header {
+  width: 85%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.number {
+  margin-top: 20px;
+  font-size: 20px;
+}
+.btnClear {
+  width: 70px;
+  padding: 10px;
+  border: none;
+  box-shadow: 2px 2px 8px #333;
+  border-radius: 5px;
+  margin: 20px 0;
+  margin-left: 90%;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.btnClear:hover {
+  transition: all 0.3s linear;
+  transform: scale(0.98);
+}
+.inputText {
+  padding: 14px 10px;
+  width: 80%;
+  border: none;
+  box-shadow: 2px 2px 8px #333;
+  border-radius: 0 0 0 5px;
+  outline: none;
+}
+.new-todo button {
+  border: none;
+  padding: 15px;
+  background-color: #330735;
+  color: #fff;
+  width: 20%;
+  border-radius: 0 0 5px 0;
+  cursor: pointer;
+  box-shadow: 2px 2px 8px #333;
+}
+ul {
+  list-style-type: none;
+}
+.todo input {
+  margin-right: 10px;
+  transition: all 0.8s linear;
+}
+.todo {
+  font-size: 20px;
+  width: 80%;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 2px 2px 8px #333;
+  transition: text-decoration 0.8s linear;
+  text-transform: capitalize;
+}
+.no-todo {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 30px;
+}
+.todo span {
+  float: right;
+  background-color: red;
+  border-radius: 50%;
+  border: none;
+  height: 30px;
+  width: 30px;
+  color: #fff;
+  font-weight: 300;
+  text-align: center;
+  transition: all 0.3s linear;
+}
+.todo span:hover {
+  box-shadow: 2px 2px 8px #333;
+  transition: all 0.3s linear;
+}
