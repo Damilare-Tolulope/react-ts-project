@@ -6,6 +6,18 @@
   width: 700px;
   margin: auto;
 }
+@media screen and (max-width: 500px) {
+  .todo-app {
+    width: 100%;
+    margin: 0;
+  }
+  .mini-header {
+    width: 20%;
+  }
+  .number {
+    font-size: 10px;
+  }
+}
 .todo-app p {
   text-align: center;
   font-size: 28px;
@@ -17,10 +29,11 @@
   border-bottom: 1px solid #ddd;
 }
 .mini-header {
-  width: 85%;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  width: 85%;
+  padding-right: 30px;
 }
 .number {
   margin-top: 20px;
