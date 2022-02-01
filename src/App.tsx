@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './components/assets/css/TodoList.css';
 import Todos from './components/Todo List/Todos';
 import AddTodo from './components/Todo List/AddTodo';
+import Footer from './components/ui/Footer';
+import Header from './components/ui/Header';
 
 const App: React.FC = () => {
 
@@ -40,15 +42,19 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className="todo-app">
-      <p style={titleStyle}>Todo list</p>
-      <AddTodo addNewTodo={handleAddTodo} />
-      <div className='mini-header'>
-        <div className="number">You have {todos.length} todos</div>
-        <button className="btnClear" onClick={clearTodo}>Clear all</button>
+    <>
+      <Header />
+      <div className="todo-app">
+        <p style={titleStyle}>Todo list</p>
+        <AddTodo addNewTodo={handleAddTodo} />
+        <div className='mini-header'>
+          <div className="number">You have {todos.length} todos</div>
+          <button className="btnClear" onClick={clearTodo}>Clear all</button>
+        </div>
+        {todos.length ? <Todos todos={todos} handleDelete={handleDelete} toggleComplete={toggleComplete} /> : <div className='no-todo'>No todo planned!</div>}
       </div>
-      {todos.length ? <Todos todos={todos} handleDelete={handleDelete} toggleComplete={toggleComplete} /> : <div className='no-todo'>No todo planned!</div>}
-    </div>
+      <Footer />
+    </>
   );
 }
 
